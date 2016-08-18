@@ -1,0 +1,57 @@
+Guide lines - 
+	- Will be graded
+	- Presenting them on Monday
+	- Make it readable
+	- Does it make since
+	- Comments!!
+	- Push small portions
+
+Extras - 
+	- Theme
+	- Sounds
+	- Something special when you hit ___ count
+
+Notes - 
+	√ - Create your HTML and CSS to position your square shape. 
+	- Randomly select a square and fade that color in then out
+	- Allow the user to click the square that was selected
+	- Continue randomly selecting colored square shapes adding the new random selection to be added to the previous selection. Eventually you will end up with a random sequence of selected colors
+	- Each time a new color is added to the sequence allow the user to enter (click) the sequence in the order that it was played
+	- If the user continues to get the order correct then proceed to adding another color to the collection until the user gets the order incorrect keep track of how many rounds the user is able to go
+
+Outline - 
+	- HTML
+		√ - Build HTML with Bootstrap
+		√ - Attach css, js, and jquery files
+		√ - Insert header and divs for boxes
+		√ - Add start button
+		√ - Show how many they have correct
+	- CSS
+		√ - Build boxes 
+		√ - Add color to boxes and center in page
+		- Add texture to buttons
+	- JS
+		- Build random counter
+			function getRandom() {
+				var num = Math.floor(Math.random() * 4) + 1
+				if (num == 1){
+					return color
+				} if (num == 2){
+					return color
+				}
+			};
+		- Lighting up the random box when called on by random counter
+		- Keeping an array of boxes that light up
+		- Allow user to select box after light up
+		- When box click have audio
+		- Keep an array of boxes the user selects
+		- Compare the arrays
+		- Update the counter when correct
+			- codeup.dev/public/html/defuse-the-BOM.html
+		- Play button
+
+
+
+
+
+

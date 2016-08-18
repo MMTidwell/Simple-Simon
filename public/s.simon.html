@@ -1,28 +1,3 @@
-<!-- 
-THIS WILL BE GRADED
-	-make it readable
-	-meke it makes since (elements are in the right place)
-	-push to git hub 
-
-Create your HTML and CSS to position your square shape. These will be the colors that are randomly seleced for the game
-	green			red
-		start button
-	blue 			yellow
-
-Randomly select a square and fade that color in then out
-	JS random select and light up
-
-Allow the user to click the square that was selected
-	user click and build on empty array
-
-Continue randomly selecting colored square shapes adding the new random selection to be added to the previous selection. Eventually you will end up with a random dequence of selected colors
-
-Each time a new color is added to the sequence allow the user to ener (click) the sequence in the order that it was played
-
-If the user continues to get the order correct then proceed to adding another color to the collection until the user gets the order incorrect keep track of how many rounds the usre is able to go
-
- --> 
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -41,6 +16,8 @@ If the user continues to get the order correct then proceed to adding another co
 
     <body>
         <h1>Simple Simon</h1>
+
+        <!-- MIAN BOX AND MAIN COLORS -->
         <div class="container">
         	<div id="boxes">
         		<div class="boxed box1"></div>
@@ -49,6 +26,16 @@ If the user continues to get the order correct then proceed to adding another co
                 <div class="boxed box4"></div>
         	</div>
         </div>
+
+        <div>
+            <button id="playGame">  Play!! </button>
+        </div>
+        
+        <div>
+            <h3>You won done <span id="winCounts">0</span> rounds!</h3>
+        </div>
+
+
    
 
 
@@ -59,6 +46,10 @@ If the user continues to get the order correct then proceed to adding another co
 
     <!-- AJAX and JS
     ================================================== -->
+    <!-- jQuery -->
+    <script src="/jquery-3.1.0.js"></script>
+
+    <!--  -->
     <script src="/s.simon.js"></script>
 
     </body>
