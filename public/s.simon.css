@@ -1,0 +1,29 @@
+#boxes {
+	border: 10px solid black;
+	height: 420px;
+	width: 420px;
+}
+
+.boxed {
+	border: 1px solid black;
+	background-image: url("/skin_side_up/skin_side_up.png");
+	height: 200px;
+	width: 200px;
+	float: left;
+}
+
+.box1 {
+	background-color: lightgreen;
+}
+
+.box2 {
+	background-color: lightCoral;
+}
+
+.box3 {
+	background-color: SteelBlue;
+}
+
+.box4{
+	background-color: goldenRod;
+}
