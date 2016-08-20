@@ -11,6 +11,7 @@
 	function getRandom(turns) {
 		for (var i = 0; i < turns; i++) {
 			this.gameOrder.push(Math.floor(Math.random() * 4) + 1);
+			lightBox()
 		}
 	};
 
@@ -46,7 +47,7 @@
 	}
 // ====================  ====================
 // ====================  ====================
-getRandom();
+
 
 
 
