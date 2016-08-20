@@ -57,10 +57,10 @@ Outline -
 		√ - Build boxes 
 		√ - Add color to boxes and center in page
 	- JS
-		- Start button
-		- Random button falshes
-			- Button is random
-			- array
+		√ - Start button
+		√ - Random button falshes
+			√ - Button is random
+			√ - array
 		- Client clickes button 
 			- array
 		- Compare the arrays
