@@ -52,11 +52,51 @@
 
 // });
 
-// ====================  ====================
-// ====================  ====================
-// ====================  ====================
-// ====================  ====================
-// ====================  ====================
+// ==================== VARIABLES ====================
+	var clientArray = [];
+	var gameArray = [];
+
+// ==================== START BUTTON ====================
+	$("#playGame").click(function() {
+		game();
+	});
+
+// ==================== GAME ====================
+	function game() {
+		// pulls random number between 1 and 4 and keeps an array
+		gameArray = gameArray.push(Math.floor(Math.random() * 4) + 1);
+		console.log(gameArray);
+
+	// ==================== LIGHTS UP ====================
+		switch (gameArray) {
+			case 1:
+				lightUp("#green");
+				// console.log("green")
+				break;
+			case 2:
+				lightUp("#red");
+				// console.log("red")
+				break;
+			case 3:
+				lightUp("#blue");
+				// console.log("blue")
+				break;
+			case 4:
+				lightUp("#yellow");
+				// console.log("yellow")
+				break;
+		}
+
+		function lightUp(box) {
+			$(box).fadeTo("fast", 1).fadeTo("fast", 0.5);
+		}
+		
+
+	};	
+
+// ==================== CLIENT BUTTON ====================
+// ==================== COMPARE ARRAYS ====================
+// ==================== UPDATE SCORE ====================
 
 
 

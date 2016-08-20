@@ -59,8 +59,12 @@ Outline -
 	- JS
 		- Start button
 		- Random button falshes
+			- Button is random
+			- array
 		- Client clickes button 
+			- array
 		- Compare the arrays
+		- Update score
 
 
 
