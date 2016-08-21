@@ -1,24 +1,25 @@
 (function(){ 
-
 	// ==================== VARIABLES ====================
 	var clientArray = [];
 	var gameArray = [];
-	var level = 0
+	var level = 0;
 
 	// ==================== START BUTTON ====================
-	// starts game once the play button is clicked
-	$("#playGame").click(function() {
-		gameOrder();
-	});
+	function play() {
+		$("#playGame").click(function() {
+			// sets it to where you can not click play more than once
+			if (level == 0) {
+				gameOrder();
+			}
+		});
+	}
 
 	// ==================== GAME ORDER ====================
 	function gameOrder() {
-		// pulls random number between 1 and 4 and keeps an array
 		gameArray.push(Math.floor(Math.random() * 4) + 1);
 
 		// let declares i for each iteration, not the loop. This way what is passed to the setTimeout is exactly what we want. let is scoped for the loop, var is scoped to the function. 
 		for (let i = 0; i < gameArray.length; i++) {
-			// initiate the delay between index of gameArray
 			setTimeout(function() {
 				switch (gameArray[i]) {
 					case 1:
@@ -35,18 +36,16 @@
 						break;
 				}
 			// i represents the delay used after the button is added to the array
-			}, i * 700);
+			}, i * 400);
 		}
 	} 
 
 	// ==================== LIGHTS UP ====================
-	// lights up the selected box
 	function lightUp(box) {
 		$(box).fadeTo("fast", 1).fadeTo("fast", 0.5);
 	}	
 
 	// ==================== CLIENT CLICKS ====================
-	// makes the boxes clickable and sends them lightUp
 	$(".boxed").click(function() {
 		var lightOnClick = "#" + $(this).attr("id");
 		lightUp(lightOnClick);
@@ -60,15 +59,17 @@
 	});
 
 	// ==================== COMPARE ARRAYS ====================
-	// compares arrays
 	function compareArrays() {
 		for (var i = 0; i < gameArray.length; i++) {
 			if (gameArray[i] != clientArray[i]) {
 				alert("You have died a miserable death \nand my little puppy can do better than you!");
+				// sets everything back to 0
+				gameArray = [];
+				level = -1;
 				break;
 			}
 		}
-		// clears client array so they can play the next level
+
 		clientArray = [];
 		level++
 		// updates the score 
@@ -77,8 +78,10 @@
 		// sets a delay between client clicks and game clicks
 		setTimeout(function() {
 			gameOrder();
-		}, 500);
+		}, 800);
 	}
+
+play();
 
 })();
 
