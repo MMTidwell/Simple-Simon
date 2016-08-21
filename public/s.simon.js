@@ -1,49 +1,21 @@
-
-
-
-
-
-
-// // ==================== GAME ORDER ====================
-// 	function flashOrder() {
-// 		$.each(gameOrder, function(index, value) {
-// 			setTimeout(function() {
-// 				this.lightBox($(this.shape + value), 1, 300, value);
-// 			}, 500)
-// 		});
-// 	};
-
-// // ==================== SCORE ====================
-// 	function playerScore() {
-// 		$("#winCounts").text(score)
-// 	}
-// // ==================== SCORE ====================
-
-
-
-
-// $(document).ready(function(){
-
-// });
+// (function(){ 
 
 // ==================== VARIABLES ====================
 	var clientArray = [];
 	var gameArray = [];
 
-
 // ==================== START BUTTON ====================
 	$("#playGame").click(function() {
-		game();
+		gameOrder();
 	});
 
-	
 // ==================== GAME ====================
-	function game() {
+	function gameOrder() {
 		// pulls random number between 1 and 4 and keeps an array
 		gameArray.push(Math.floor(Math.random() * 4) + 1);
 		// console.log(gameArray + " game()");
 
-	// ==================== LIGHTS UP ====================
+		// ==================== LIGHTS UP ====================
 		// let declares i for each iteration, not the loop. This way what is passed to the setTimeout is exactly what we want. let is scoped for the loop, var is scoped to the function. 
 		for (let i = 0; i < gameArray.length; i++) {
 			setTimeout(function() {
@@ -70,18 +42,41 @@
 
 		function lightUp(box) {
 			$(box).fadeTo("fast", 1).fadeTo("fast", 0.5);
+			// console.log(gameArray + " lightUp()");
+		}	
+	} 
 
-			console.log(gameArray + " lightUp()");
-			console.log("\n")
+	// ==================== CLIENT CLICKS ====================
+	$(".boxed").click(function() {
+		clientArray.push(parseInt($(this).attr("class").split(' ')[1]));
+		// console.log(clientArray[0]);
+
+		if (clientArray == gameArray)
+
+		compareArrays();
+
+	});
+
+// ==================== COMPARE ARRAYS ====================
+	function compareArrays() {
+		for (var i = 0; i < gameArray.length; i++) {
+			console.log("gameArray() " + gameArray);
+			console.log("clientArray() " + clientArray);
+
+			if (gameArray[i] == clientArray[i]) {
+				clientArray = [];
+			} else {
+				alert("You have died a miserable death \nand my little puppy can do better than you!")
+				break;
+			}
 		}
-		
+		gameOrder();
 	}
 
-// ==================== CLIENT BUTTON ====================
-// ==================== COMPARE ARRAYS ====================
+
 // ==================== UPDATE SCORE ====================
 
-
+// })();
 
 
 
