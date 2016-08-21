@@ -61,10 +61,10 @@ Outline -
 		√ - Random button falshes
 			√ - Button is random
 			√ - array
-		- Client clickes button 
-			- array
-		- Compare the arrays
-		- Update score
+		√ - Client clickes button 
+			√ - array
+		√ - Compare the arrays
+		√ - Update score
 
 
 
