@@ -33,6 +33,10 @@
 	background-image: url("/dean.jpg");	
 }
 
+#blackBox {
+	background-color: black;
+}
+
 /* ============ BELLOW THE BOXES ==================*/
 h1, h3 {
 	text-align: center;

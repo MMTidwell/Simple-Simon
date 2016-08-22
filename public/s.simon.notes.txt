@@ -9,7 +9,7 @@ Guide lines -
 
 Extras - 
 	- Add texture to the boxes
-	- Theme
+	√ - Theme
 	- Sounds
 	- Something special when you hit ___ count
 	- High Score
@@ -28,8 +28,8 @@ Notes -
 
 
 Client function - 
-	- page opens
-	- reads page (HTML and CSS)
+	√ - page opens
+	√ - reads page (HTML and CSS)
 	- clicks play button
 		-button is clicked
 	- button flashes
@@ -69,9 +69,9 @@ Outline -
 		√ - Update score
 
 Small bugs - 
-	- Auto restart (rather restart the game on start than clicking alert)
-	- Checks length before index
-	- get level from .length of array (this will get rid of var level)
+	√ - Auto restart 
+	√ - Checks length before index
+	√ - get level from .length of array (this will get rid of var level)
 
 
 

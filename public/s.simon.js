@@ -1,14 +1,13 @@
 (function(){ 
 	// ==================== VARIABLES ====================
 	var gameArray = [];
-	var level = 0;
 	var count = 0
 
 	// ==================== START BUTTON ====================
 	function play() {
 		$("#playGame").click(function() {
 			// sets it to where you can not click play more than once
-			if (level == 0) {
+			if (count == 0) {
 				gameOrder();
 			}
 		});
@@ -46,25 +45,19 @@
 		$(box).fadeTo("fast", 1).fadeTo("fast", 0.5);
 	}	
 
-	// ==================== CLIENT CLICKS ====================
+	// ==================== COMPARES CLICK ====================
 	function clientClicks() {
-		// turns click on
-		$(".boxed").on("click", function(e) {
+		$(".boxed").on("click", function() {
 			var lightOnClick = "#" + $(this).attr("id");
 			var buttonClicked = $(this).attr("value");
-			// calls the light up function
 			lightUp(lightOnClick);
 			
 			// check button clicked and compares to gameArray
 			if (buttonClicked == gameArray[count]) {
-				// increases count index by 1 for gameArray
 				count++;
 				if (count == gameArray.length) {
-
-					// increases level by 1
-					level++;
 					// updates the score 
-					$('#winCounts').html(level);
+					$('#winCounts').html(count);
 
 					// sets a delay between client clicks and game clicks
 					setTimeout(function() {
@@ -73,7 +66,6 @@
 						gameOrder();
 					}, 800);
 				} else {
-					// turns click off
 					$(".boxed").off("click");
 					// recalls itself if gameArray has anything left in it
 					clientClicks();
