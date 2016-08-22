@@ -1,8 +1,8 @@
 (function(){ 
 	// ==================== VARIABLES ====================
-	var clientArray = [];
 	var gameArray = [];
 	var level = 0;
+	var count = 0
 
 	// ==================== START BUTTON ====================
 	function play() {
@@ -37,7 +37,8 @@
 				}
 			// i represents the delay used after the button is added to the array
 			}, i * 400);
-		}
+		} 
+		clientClicks();
 	} 
 
 	// ==================== LIGHTS UP ====================
@@ -46,40 +47,44 @@
 	}	
 
 	// ==================== CLIENT CLICKS ====================
-	$(".boxed").click(function() {
-		var lightOnClick = "#" + $(this).attr("id");
-		lightUp(lightOnClick);
-		// adds the click to array as a number
-		clientArray.push(parseInt($(this).attr("class").split(' ')[1]));
+	function clientClicks() {
+		// turns click on
+		$(".boxed").on("click", function(e) {
+			var lightOnClick = "#" + $(this).attr("id");
+			var buttonClicked = $(this).attr("value");
+			// calls the light up function
+			lightUp(lightOnClick);
+			
+			// check button clicked and compares to gameArray
+			if (buttonClicked == gameArray[count]) {
+				// increases count index by 1 for gameArray
+				count++;
+				if (count == gameArray.length) {
 
-		// checks to see if the lengths are the same for both arrays
-		if (clientArray.length == gameArray.length) {
-			compareArrays();
-		} 
-	});
+					// increases level by 1
+					level++;
+					// updates the score 
+					$('#winCounts').html(level);
 
-	// ==================== COMPARE ARRAYS ====================
-	function compareArrays() {
-		for (var i = 0; i < gameArray.length; i++) {
-			if (gameArray[i] != clientArray[i]) {
+					// sets a delay between client clicks and game clicks
+					setTimeout(function() {
+						count = 0;
+						$(".boxed").off("click");
+						gameOrder();
+					}, 800);
+				} else {
+					// turns click off
+					$(".boxed").off("click");
+					// recalls itself if gameArray has anything left in it
+					clientClicks();
+				}
+			} else {
 				alert("You have died a miserable death\nand my little puppy can do better than you!\nGive it another try!");
-				// sets everything back to 0
-				gameArray = [];
-				level = -1;
-				break;
+				// reloads page
+				location.reload();
 			}
-		}
-
-		clientArray = [];
-		level++;
-		// updates the score 
-		$('#winCounts').html(level);
-
-		// sets a delay between client clicks and game clicks
-		setTimeout(function() {
-			gameOrder();
-		}, 800);
-	}
+		});		
+	};
 
 play();
 

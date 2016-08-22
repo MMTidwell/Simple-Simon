@@ -14,15 +14,17 @@ Extras -
 	- Something special when you hit ___ count
 	- High Score
 	- Difficulty levels
+	- Animation on click
+	- Black box over game, start button on top. When start button is pushed black box fades away and game starts. Or start button in middle and nothing behind it. Once clicked then the game fades in. 
 
 
 Notes - 
 	√ - Create your HTML and CSS to position your square shape. 
-	- Randomly select a square and fade that color in then out
-	- Allow the user to click the square that was selected
-	- Continue randomly selecting colored square shapes adding the new random selection to be added to the previous selection. Eventually you will end up with a random sequence of selected colors
-	- Each time a new color is added to the sequence allow the user to enter (click) the sequence in the order that it was played
-	- If the user continues to get the order correct then proceed to adding another color to the collection until the user gets the order incorrect keep track of how many rounds the user is able to go
+	√ - Randomly select a square and fade that color in then out
+	√ - Allow the user to click the square that was selected
+	√ - Continue randomly selecting colored square shapes adding the new random selection to be added to the previous selection. Eventually you will end up with a random sequence of selected colors
+	√ - Each time a new color is added to the sequence allow the user to enter (click) the sequence in the order that it was played
+	√ - If the user continues to get the order correct then proceed to adding another color to the collection until the user gets the order incorrect keep track of how many rounds the user is able to go
 
 
 Client function - 
@@ -58,14 +60,18 @@ Outline -
 		√ - Add color to boxes and center in page
 	- JS
 		√ - Start button
-		√ - Random button falshes
+		√ - Random button flashes
 			√ - Button is random
 			√ - array
-		√ - Client clickes button 
+		√ - Client clicks button 
 			√ - array
 		√ - Compare the arrays
 		√ - Update score
 
+Small bugs - 
+	- Auto restart (rather restart the game on start than clicking alert)
+	- Checks length before index
+	- get level from .length of array (this will get rid of var level)
 
 
 
