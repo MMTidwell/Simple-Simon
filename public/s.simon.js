@@ -71,7 +71,7 @@
 		}
 
 		clientArray = [];
-		level++
+		level++;
 		// updates the score 
 		$('#winCounts').html(level);
 

@@ -2,6 +2,7 @@
 /* ============ BOXES FOR GAME ==================*/
 #boxes {
 	border: 10px solid black;
+	background-color: black;
 	height: 620px;
 	width: 620px;
 	margin: 0 auto;
@@ -17,22 +18,18 @@
 }
 
 #green {
-	background-color: green;
 	background-image: url("/sam.jpeg");
 }
 
 #red {
-	background-color: red;
 	background-image: url("/cas.jpeg");
 }
 
 #blue {
-	background-color: blue;
 	background-image: url("/crowley.jpg");
 }
 
 #yellow {
-	background-color: yellow;
 	background-image: url("/dean.jpg");	
 }
 
@@ -46,7 +43,7 @@ button#playGame {
 	display: block;
 	margin: 0 auto;
 	background-color: white;
-	margin-top: 2%;
+	margin-bottom: 2%;
 }
 
 body {
