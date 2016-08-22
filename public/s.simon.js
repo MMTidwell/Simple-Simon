@@ -62,7 +62,7 @@
 	function compareArrays() {
 		for (var i = 0; i < gameArray.length; i++) {
 			if (gameArray[i] != clientArray[i]) {
-				alert("You have died a miserable death \nand my little puppy can do better than you!");
+				alert("You have died a miserable death\nand my little puppy can do better than you!\nGive it another try!");
 				// sets everything back to 0
 				gameArray = [];
 				level = -1;
