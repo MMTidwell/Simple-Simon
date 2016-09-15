@@ -1,7 +1,7 @@
 (function(){ 
 	// ==================== VARIABLES ====================
 	var gameArray = [];
-	var count = 0
+	var count = 0;
 
 	// ==================== START BUTTON ====================
 	function play() {
