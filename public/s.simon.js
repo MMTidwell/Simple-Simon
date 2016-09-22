@@ -8,6 +8,7 @@
 		$("#playGame").click(function() {
 			// sets it to where you can not click play more than once
 			if (count == 0) {
+				$("#playGame").hide();
 				gameOrder();
 			}
 		});
@@ -73,6 +74,7 @@
 			} else {
 				alert("You have died a miserable death\nand my little puppy can do better than you!\nGive it another try!");
 				// reloads page
+				$("#playGame").show();
 				location.reload();
 			}
 		});		
