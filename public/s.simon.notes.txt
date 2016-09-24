@@ -64,7 +64,7 @@ Small bugs -
 	√ - get level from .length of array (this will get rid of var level)
 
 Extras - 
-	- screen responsive
+	√ - screen responsive
 	- Add texture to the boxes
 	- Sounds
 	√ - Theme
@@ -72,9 +72,9 @@ Extras -
 	- High Score
 	- Difficulty levels
 	√ - Animation on click
-	- Adjust start button
+	√ - Adjust start button
 	- black box over game before play button pressed
-	- comment code out
+	√ - comment code out
 	- put on personal site
 
 
